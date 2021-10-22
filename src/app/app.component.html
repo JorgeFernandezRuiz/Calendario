@@ -1,0 +1,6 @@
+<div class="calendar-container">
+<app-hora-actual [date]="date"></app-hora-actual>
+  <app-dia-actual [diaActual]="currentDate"></app-dia-actual>
+  <hr class="separador"/>
+  <app-grid-dias [date]="date" (currentDate)="setCurrentDate($event)"></app-grid-dias>
+</div>

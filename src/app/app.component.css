@@ -1,0 +1,19 @@
+html{
+  margin: 0;
+  padding: 0;
+}
+*{
+  margin: 0 auto;
+  padding: 0;
+}
+.calendar-container{
+  width: 500px;
+  background: beige;
+  min-height: 500px;
+}
+.separador{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: gray;
+}

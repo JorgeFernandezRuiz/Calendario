@@ -1,0 +1,9 @@
+<div class="container-dias">
+  <div class="date" *ngFor="let item of days">
+    <span>{{item}}</span>
+  </div>
+
+  <div class="date" *ngFor="let item of dates">
+    <a [ngClass]="{'today': item.getDate() == today, 'inactive': item.getMonth() != date.getMonth()  }" (click)="setCurrentDate(item)">{{item | date:'dd'}}</a>
+  </div>
+</div>

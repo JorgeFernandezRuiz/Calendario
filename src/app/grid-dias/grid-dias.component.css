@@ -1,0 +1,51 @@
+.container-dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 10px 10px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . .";
+}
+
+/*.date{*/
+/*  margin: 10px;*/
+/*  padding: 10px;*/
+/*  align-content: center;*/
+/*  text-align: center;*/
+/*}*/
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: color 2s;
+}
+
+.date:hover {
+  background-color: #336699;
+}
+
+.date a {
+  text-decoration: none;
+  color: black;
+}
+
+.date a.inactive {
+  color: gray;
+}
+.date a.selected {
+  box-shadow: inset 0 0 0 3px var(--grid-day-selected);
+}
+.date a.today {
+  background-color: aqua;
+}
