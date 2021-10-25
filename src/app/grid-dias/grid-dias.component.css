@@ -1,51 +1,59 @@
-.container-dias {
+
+.day-of-week,
+.date-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  gap: 10px 10px;
-  grid-template-areas:
-    ". . . . . . ."
-    ". . . . . . ."
-    ". . . . . . ."
-    ". . . . . . ."
-    ". . . . . . ."
-    ". . . . . . ."
-    ". . . . . . .";
+  justify-items: center;
+  align-items: center;
+}
+.day-of-week {
+  margin-top: 1.25em;
 }
 
-/*.date{*/
-/*  margin: 10px;*/
-/*  padding: 10px;*/
-/*  align-content: center;*/
-/*  text-align: center;*/
+.day-of-week > * {
+  font-size: 0.7em;
+  color: var(--blue-grey-400);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.date-grid {
+  margin-top: 0.5em;
+}
+/*!* Positioning the first day *!*/
+/*.date-grid button:first-child {*/
+/*  grid-column: 0;*/
 /*}*/
 
-.date {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  overflow: hidden;
-  text-align: center;
-  cursor: pointer;
-  transition: color 2s;
+.date-grid button {
+     position: relative;
+     border: 0;
+     width: 4.5ch;
+     height: 4.5ch;
+     border-radius: 50%;
+     background-color: transparent;
+     color: var(--blue-grey-600);
+   }
+
+.date-grid button:hover,
+.date-grid button:focus {
+  outline: none;
+  background-color: var(--blue-grey-050);
+  color: var(--blue-grey-700);
 }
 
-.date:hover {
-  background-color: #336699;
+.date-grid button:active,
+.date-grid button.is-selected {
+  background-color: var(--teal-100);
+  color: var(--teal-900);
 }
 
-.date a {
-  text-decoration: none;
-  color: black;
+.date-grid button.inactive{
+  color: var(--blue-grey-200);
 }
 
-.date a.inactive {
-  color: gray;
-}
-.date a.selected {
-  box-shadow: inset 0 0 0 3px var(--grid-day-selected);
-}
-.date a.today {
-  background-color: aqua;
+.date-grid button.today{
+  background-color: var(--blue-grey-300);
 }

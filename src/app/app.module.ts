@@ -8,6 +8,7 @@ import { LOCALE_ID } from '@angular/core';
 import localeEsEs from '@angular/common/locales/es';
 import {registerLocaleData} from "@angular/common";
 import { GridDiasComponent } from './grid-dias/grid-dias.component';
+import { PrevNextMonthComponent } from './prev-next-month/prev-next-month.component';
 
 registerLocaleData(localeEsEs);
 @NgModule({
@@ -15,7 +16,8 @@ registerLocaleData(localeEsEs);
     AppComponent,
     HoraActualComponent,
     DiaActualComponent,
-    GridDiasComponent
+    GridDiasComponent,
+    PrevNextMonthComponent
   ],
   imports: [
     BrowserModule

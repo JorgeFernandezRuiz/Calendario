@@ -1,19 +1,38 @@
-html{
-  margin: 0;
-  padding: 0;
+html {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 125%;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--blue-grey-900);
 }
-*{
-  margin: 0 auto;
-  padding: 0;
+
+body {
+  min-height: 100vh;
+  background: var(--blue-grey-100);
 }
-.calendar-container{
+
+.main {
+  max-width: max-content;
+  margin: 3em auto 0 auto;
+  padding: 1.5em;
+  background-color: #fff;
+  border: 2px solid var(--blue-grey-200);
+  border-radius: 8px;
   width: 500px;
-  background: beige;
-  min-height: 500px;
 }
+
 .separador{
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   background-color: gray;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 5fr repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 5px 5px;
+  grid-template-areas:
+    ". . .";
 }

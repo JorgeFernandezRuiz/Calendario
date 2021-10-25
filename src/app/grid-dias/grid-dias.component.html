@@ -1,9 +1,8 @@
-<div class="container-dias">
-  <div class="date" *ngFor="let item of days">
-    <span>{{item}}</span>
+<div class="calendar">
+  <div class="day-of-week">
+    <div  *ngFor="let item of days">{{item}}</div>
   </div>
-
-  <div class="date" *ngFor="let item of dates">
-    <a [ngClass]="{'today': item.getDate() == today, 'inactive': item.getMonth() != date.getMonth()  }" (click)="setCurrentDate(item)">{{item | date:'dd'}}</a>
+  <div class="date-grid">
+      <button  *ngFor="let item of dates" (click)="setCurrentDate(item)" [ngClass]="{'today': item.getDate() == today, 'inactive': item.getMonth() != date.getMonth()  }">{{item | date:'dd'}}</button>
   </div>
 </div>

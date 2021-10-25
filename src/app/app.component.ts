@@ -10,6 +10,8 @@ export class AppComponent implements  OnInit{
   date: Date = new Date();
   currentDate: Date = this.date;
   private timer:any;
+  PREV: string="PREV";
+  NEXT: string="NEXT";
   ngOnInit(): void {
     this.startTimer(this.date);
   }
@@ -25,5 +27,9 @@ export class AppComponent implements  OnInit{
   }
   stopTimer(){
     clearInterval(this.timer);
+  }
+
+  setCurrentMonth($event: any) {
+
   }
 }

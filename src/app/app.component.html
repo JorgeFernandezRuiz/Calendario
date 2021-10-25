@@ -1,6 +1,10 @@
-<div class="calendar-container">
+<div class="main">
 <app-hora-actual [date]="date"></app-hora-actual>
-  <app-dia-actual [diaActual]="currentDate"></app-dia-actual>
+  <div class="container">
+    <app-dia-actual [diaActual]="currentDate"></app-dia-actual>
+    <app-prev-next-month [tipo]="PREV" (currentMonth)="setCurrentMonth($event)"></app-prev-next-month>
+    <app-prev-next-month [tipo]="NEXT" (currentMonth)="setCurrentMonth($event)"></app-prev-next-month>
+  </div>
   <hr class="separador"/>
   <app-grid-dias [date]="date" (currentDate)="setCurrentDate($event)"></app-grid-dias>
 </div>
